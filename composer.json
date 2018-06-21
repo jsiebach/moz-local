@@ -1,0 +1,32 @@
+{
+    "name": "jsiebach/moz-local",
+    "description": "A PHP package for interfacing with the Moz Local API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeff Siebach",
+            "email": "jeff@jeffsiebach.com",
+            "homepage": "https://jeffsiebach.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "JSiebach\\MozLocal\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JSiebach\\MozLocal\\MozLocalServiceProvider"
+            ],
+            "aliases": {
+                "MozLocal": "JSiebach\\MozLocal\\MozLocalFacade"
+            }
+        }
+    }
+}
